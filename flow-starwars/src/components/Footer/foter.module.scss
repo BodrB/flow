@@ -1,0 +1,38 @@
+.wrapper {
+  background-color: #141414;
+  padding: 1rem;
+
+  :global {
+    .ant-collapse-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white !important;
+    }
+
+    .ant-collapse-expand-icon {
+      order: 2;
+    }
+    .li::marker {
+      color: white;
+    }
+  }
+
+  .customList {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+  }
+
+  .customList li {
+    position: relative;
+    padding-left: 1rem; /* Space for custom bullet */
+    color: white;
+  }
+
+  .customList li::before {
+    content: "•"; /* Custom bullet character */
+    position: absolute;
+    left: 0;
+    color: white; /* Color of the custom bullet */
+  }
+}
